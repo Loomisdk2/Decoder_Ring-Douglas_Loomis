@@ -12,6 +12,12 @@ const caesarModule = (function () {
     The decoder will shift the coding alphabet the amount idicated (L (-) or R (+)).
     If the message is to be encoded then encode = true. For decoding encode = false.
     For decoding the fn will shift the opposite direction indicated.
+    Notes* 
+    1. If the shift value is set to 0, less than -25, or greater than 25 it should return false
+    2. Spaces and other nonalphabetical symbols should be maintained
+    3. Capital letter are ignored (toLowercase)
+    4. If a letter is shifted so that it goes "off" the alphabet (e.g., a shift of 3 on the letter z), 
+    it should wrap around to the front of the alphabet (e.g., z becomes c).
     */
 
     // Fn will take in an input (message)

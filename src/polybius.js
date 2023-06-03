@@ -3,6 +3,7 @@
 // Only add code (helper methods, variables, etc.) within the scope
 // of the anonymous function on line 6
 
+// map, forEach
 const polybiusModule = (function () {
   // you can add any code you want within this function scope
 

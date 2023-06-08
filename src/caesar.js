@@ -51,7 +51,7 @@ const caesarModule = (function () {
     const charCodeZ = "z".charCodeAt(0);
 
 if(encode) {
-  const encodeArray = inputArray.map((char) => {
+  const encodedArray = inputArray.map((char) => {
     const currentCharCode = char.charCodeAt(0);
 
     // maintains spaces and other nonalphabetic symbols in the message

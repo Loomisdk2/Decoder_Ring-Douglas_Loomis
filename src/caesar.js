@@ -64,7 +64,7 @@ if(encode) {
     if(shiftedCharCode > charCodeZ) {
       return String.fromCharCode(charCodeA + ((shiftedCharCode - charCodeZ) - 1));
     } else if (shiftedCharCode < charCodeA) {
-      returnString.fromCharCode(charCodeZ - ((charCode - shiftedCharCode) - 1));
+      return String.fromCharCode(charCodeZ - ((charCode - shiftedCharCode) - 1));
     } else {
       return String.fromCharCode(shiftedCharCode);
     }

@@ -35,11 +35,6 @@ const caesarModule = (function () {
       return false;
     }
 
-    // If user wants to decode
-    if(encode === false) {
-      shift = shift * -1;
-    }
-
     // Var to hold result
     let result = "";
 
@@ -113,3 +108,8 @@ module.exports = { caesar: caesarModule.caesar };
     // let alphabet = "abcdefghijklmnopqrstuvwxyz";
     // let newAlpha = "";
     // .toLowercase()
+
+    // If user wants to decode
+    // if(encode === false) {
+    //   shift = shift * -1;
+    // }

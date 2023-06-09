@@ -65,7 +65,7 @@ if (!encode) {
   result = coordinates.map((yx) => {
     let rowIndex = yx.split("")[1] - 1;
     let columnIndex = yx.split("")[0] - 1;
-    return square[rowIndex][columnIndex];
+    return polyGrid[rowIndex][columnIndex];
   });
 }
 

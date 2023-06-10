@@ -1,26 +1,11 @@
-// Please refrain from tampering with the setup code provided here,
-// as the index.html and test files rely on this setup to work properly.
-// Only add code (helper methods, variables, etc.) within the scope
-// of the anonymous function on line 6
-
-
-// The input could include spaces and letters as well as special characters such as #, $, *, etc.
-// Spaces should be maintained throughout.
-// Capital letters can be ignored.
-// The alphabet parameter must be a string of exactly 26 characters, which could include special characters such as #, $, *, etc. Otherwise, it should return false.
-// All the characters in the alphabet parameter must be unique. Otherwise, it should return false.
-
-
 const substitutionModule = (function () {
-  // you can add any code you want within this function scope
-
   function substitution(input, alphabet, encode = true) {
     // alphabet must exist and be 26 characters long
 if(!alphabet || alphabet.length !== 26) return false;
 
 // Global Variables
 const realAlphaArray = "abcdefghijklmnopqrstuvwxyz".split("");
-const inputArray = input.toLowerCase().split();
+const inputArray = input.toLowerCase().split("");
 const subAlphaArray = alphabet.toLowerCase().split("");
 
 // Substitution alphabet cannot have any repeated characters
@@ -66,3 +51,9 @@ const onlyUniqueChars = subAlphaArray.filter(
 })();
 
 module.exports = { substitution: substitutionModule.substitution };
+
+// The input could include spaces and letters as well as special characters such as #, $, *, etc.
+// Spaces should be maintained throughout.
+// Capital letters can be ignored.
+// The alphabet parameter must be a string of exactly 26 characters, which could include special characters such as #, $, *, etc. Otherwise, it should return false.
+// All the characters in the alphabet parameter must be unique. Otherwise, it should return false.

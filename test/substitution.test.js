@@ -26,60 +26,60 @@ describe("substitution() submission tests written by Douglas Loomis", () => {
   });
 
   describe("encoding a message", () => {
-//
+// done
     it("should encode a message by using the given substitution alphabet", () => {
       const message = "cheesefries";
-      const alphabet = "plmoknijbuhvygctfxrdzeswaq";
+      const alphabet = "qwertyuioplkjhgfdsazxcvbnm";
       const actual = substitution(message, alphabet);
-      const expected = "ykrrpik";
+      const expected = "eittatysota";
 
       expect(actual).to.equal(expected);
     });
-//
+// done
     it("should work with any kind of key with unique characters", () => {
-      const message = "message";
-      const alphabet = ".waeszrdxtfcygvuhbijnokmpl";
+      const message = "cheesefries";
+      const alphabet = ".wertyui0plkjhgfd$azxcvbnm";
       const actual = substitution(message, alphabet);
-      const expected = "ysii.rs";
+      const expected = "eittaty$0ta";
 
       expect(actual).to.equal(expected);
     });
-//
+// done
     it("should preserve spaces", () => {
-      const message = "my message";
-      const alphabet = ".waeszrdxtfcygvuhbijnokmpl";
+      const message = "my space";
+      const alphabet = ".wertyui0plkjhgfd$azxcvbnm";
       const actual = substitution(message, alphabet);
-      const expected = "yp ysii.rs";
+      const expected = "jn af.et";
 
       expect(actual).to.equal(expected);
     });
   });
 
   describe("decoding a message", () => {
-//
+// done
     it("should decode a message by using the given substitution alphabet", () => {
-      const message = "ykrrpik";
-      const alphabet = "plmoknijbuhvygctfxrdzeswaq";
+      const message = "eittatysota";
+      const alphabet = "qwertyuioplkjhgfdsazxcvbnm";
       const actual = substitution(message, alphabet, false);
-      const expected = "message";
+      const expected = "cheesefries";
 
       expect(actual).to.equal(expected);
     });
-//
+// done
     it("should work with any kind of key with unique characters", () => {
-      const message = "ysii.rs";
+      const message = " jn af.et";
       const alphabet = ".waeszrdxtfcygvuhbijnokmpl";
       const actual = substitution(message, alphabet, false);
-      const expected = "message";
+      const expected = "my space";
 
       expect(actual).to.equal(expected);
     });
-//
+// done
     it("should preserve spaces", () => {
-      const message = "yp ysii.rs";
-      const alphabet = ".waeszrdxtfcygvuhbijnokmpl";
+      const message = "jn af.et";
+      const alphabet = ".wertyui0plkjhgfd$azxcvbnm";
       const actual = substitution(message, alphabet, false);
-      const expected = "my message";
+      const expected = "my space";
 
       expect(actual).to.equal(expected);
     });

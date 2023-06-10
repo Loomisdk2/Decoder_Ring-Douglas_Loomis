@@ -57,7 +57,7 @@ const onlyUniqueChars = subAlphaArray.filter(
     };
 
     // Errors now handled, decide next to encode or decode
-    return encode ? encodedMessage() : decodeMessage():
+    return encode ? encodeMessage() : decodeMessage();
   }
 
   return {

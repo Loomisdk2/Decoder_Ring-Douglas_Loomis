@@ -67,7 +67,7 @@ describe("substitution() submission tests written by Douglas Loomis", () => {
     });
 // done
     it("should work with any kind of key with unique characters", () => {
-      const message = "jn af.et";
+      const message = "yp iu.as";
       const alphabet = ".waeszrdxtfcygvuhbijnokmpl";
       const actual = substitution(message, alphabet, false);
       const expected = "my space";
